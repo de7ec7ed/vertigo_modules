@@ -35,11 +35,11 @@ build:
 	@$(MAKE) -s --directory pgtblmod build
 	@$(MAKE) -s --directory cryptomod build
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod build; fi
-	@$(MAKE) -s --directory linmod build
+	#@$(MAKE) -s --directory linmod build
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory openibootmod build; fi
-	@$(MAKE) -s --directory gdbmod build
-	@$(MAKE) -s --directory injectmod build
-	@$(MAKE) -s --directory testmod build
+	#@$(MAKE) -s --directory gdbmod build
+	#@$(MAKE) -s --directory injectmod build
+	#@$(MAKE) -s --directory testmod build
 
 check:
 	@echo "checking toolchain"
@@ -62,11 +62,11 @@ includes:
 	@$(MAKE) -s --directory pgtblmod includes
 	@$(MAKE) -s --directory cryptomod includes
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod includes; fi
-		@$(MAKE) -s --directory linmod includes
+	#@$(MAKE) -s --directory linmod includes
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory openibootmod includes; fi
-	@$(MAKE) -s --directory gdbmod includes
-	@$(MAKE) -s --directory injectmod includes
-	@$(MAKE) -s --directory testmod includes
+	#@$(MAKE) -s --directory gdbmod includes
+	#@$(MAKE) -s --directory injectmod includes
+	#@$(MAKE) -s --directory testmod includes
 
 clean:
 	@echo "cleaning modules"
@@ -79,8 +79,8 @@ clean:
 	@$(MAKE) -s --directory pgtblmod clean
 	@$(MAKE) -s --directory cryptomod clean
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod clean; fi
-	@$(MAKE) -s --directory linmod clean
+	#@$(MAKE) -s --directory linmod clean
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory openibootmod clean; fi
-	@$(MAKE) -s --directory gdbmod clean
-	@$(MAKE) -s --directory injectmod clean
-	@$(MAKE) -s --directory testmod clean
+	#@$(MAKE) -s --directory gdbmod clean
+	#@$(MAKE) -s --directory injectmod clean
+	#@$(MAKE) -s --directory testmod clean
