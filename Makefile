@@ -32,6 +32,7 @@ build:
 	@$(MAKE) -s --directory pl192mod build
 	@if test $(SERIES) = cortex-a9; then @$(MAKE) -s --directory a9mod build; fi
 	@$(MAKE) -s --directory bkptmod build
+	@$(MAKE) -s --directory sdwmod build
 	@$(MAKE) -s --directory pgtblmod build
 	@$(MAKE) -s --directory cryptomod build
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod build; fi
@@ -59,6 +60,7 @@ includes:
 	@$(MAKE) -s --directory pl192mod includes
 	@if test $(SERIES) = cortex-a9; then @$(MAKE) -s --directory a9mod includes; fi
 	@$(MAKE) -s --directory bkptmod includes
+	@$(MAKE) -s --directory sdwmod includes
 	@$(MAKE) -s --directory pgtblmod includes
 	@$(MAKE) -s --directory cryptomod includes
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod includes; fi
@@ -76,6 +78,7 @@ clean:
 	@$(MAKE) -s --directory pl192mod clean
 	@if test $(SERIES) = cortex-a9; then @$(MAKE) -s --directory a9mod clean; fi
 	@$(MAKE) -s --directory bkptmod clean
+	@$(MAKE) -s --directory sdwmod clean
 	@$(MAKE) -s --directory pgtblmod clean
 	@$(MAKE) -s --directory cryptomod clean
 	@if test $(SOC) = s5l8930; then $(MAKE) -s --directory wdtmod clean; fi
